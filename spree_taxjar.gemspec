@@ -14,9 +14,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  spree_version = '>= 3.2.0', '< 4.0.0'
-
-  s.add_dependency 'spree_core', spree_version
+  s.add_dependency 'spree_core', '~> 2.4'
   s.add_dependency 'taxjar-ruby', '~> 2.0.0'
 
   s.add_development_dependency 'capybara', '~> 2.6'

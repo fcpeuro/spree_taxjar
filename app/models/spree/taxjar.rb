@@ -120,7 +120,7 @@ module Spree
           {
             id: item.id,
             quantity: item.quantity,
-            unit_price: item.taxable_amount / item.quantity,
+            unit_price: item.price,
             product_tax_code: item.tax_category.try(:tax_code)
           }
         end
@@ -188,7 +188,7 @@ module Spree
 
       def line_item_params
         @order.line_items.map do |item|
-          unit_price = item.taxable_amount / item.quantity
+          unit_price = item.price
           {
             quantity: item.quantity,
             product_identifier: item.sku,
