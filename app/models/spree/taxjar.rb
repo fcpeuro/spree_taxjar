@@ -113,7 +113,10 @@ module Spree
         {
           amount: @order.item_total,
           shipping: @order.shipment_total + adjustments_total(@order.shipment_adjustments),
+          to_city: tax_address_city,
+          to_country: tax_address_country_iso,
           to_state: tax_address_state_abbr,
+          to_street: tax_address_street,
           to_zip: tax_address_zip,
           line_items: taxable_line_items_params
         }
