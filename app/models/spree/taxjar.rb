@@ -101,6 +101,10 @@ module Spree
         tax_address.zipcode
       end
 
+      def tax_address_street
+        tax_address.address1
+      end
+
       def tax_address
         @order.tax_address
       end
@@ -172,10 +176,11 @@ module Spree
 
       def address_params
         {
+          to_city: tax_address_city,
           to_country: tax_address_country_iso,
-          to_zip: tax_address_zip,
           to_state: tax_address_state_abbr,
-          to_city: tax_address_city
+          to_street: tax_address_street,
+          to_zip: tax_address_zip
         }
       end
 
