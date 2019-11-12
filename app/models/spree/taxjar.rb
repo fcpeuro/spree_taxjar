@@ -90,7 +90,7 @@ module Spree
       end
 
       def tax_address_state_abbr
-        tax_address.state.abbr
+        (tax_address.state && tax_address.state.abbr)  || tax_address.state_name
       end
 
       def tax_address_city
