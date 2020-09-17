@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version     = '3.2.0'
   s.summary     = 'Spree extension to calculate sales tax in states of USA'
   s.description = 'Spree extension for providing TaxJar services in USA'
-  s.required_ruby_version = '>= 2.1.0'
+  s.required_ruby_version = '>= 2.4.0'
 
   s.author    = ['Nimish Gupta', 'Tanmay Sinha']
   s.email     = ['nimish.gupta@vinsol.com', 'tanmay@vinsol.com']
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 2.4'
+  s.add_dependency 'solidus_core', '~> 1.4.0'
   s.add_dependency 'taxjar-ruby', '~> 2.0.0'
 
   s.add_development_dependency 'capybara', '~> 2.6'
